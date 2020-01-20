@@ -1,0 +1,101 @@
+.btn {
+	display: inline-block;
+	padding: 1.2em 3.88em;
+	line-height: 1;
+	cursor: pointer;
+	transition: $trans;
+	font-size: 14px;
+	outline: none;
+	white-space: nowrap;
+	border-radius: 25px;
+	border-width: 0;
+	font-weight: 400;
+	transform: translateY(0);
+	background-color: transparent;
+	border: 1px solid transparent;
+
+	@include media-breakpoint-down(sm) {
+		border-radius: 17px;
+		font-size: 10px;
+	}
+
+	&:active {
+		transform: translateY(1px);
+	}
+
+	&--yellow {
+		background-color: $yellow;
+		color: $white;
+
+		&:hover {
+			background-color: lighten($yellow, 10%);
+		}
+	}
+
+	&--saffron {
+		background-color: $saffron;
+		color: $white;
+
+		&:hover {
+			background-color: lighten($saffron, 10%);
+		}
+	}
+
+	&--orange {
+		background-color: $orange;
+		color: $white;
+
+		&:hover {
+			background-color: lighten($orange, 10%);
+		}
+	}
+
+	&--accent {
+		background-color: $accent;
+		color: $white;
+
+		&:hover {
+			background-color: lighten($accent, 10%);
+		}
+	}
+
+	&--accent-border {
+		border: 2px solid $accent;
+		color: $accent;
+
+		&:hover {
+			color: lighten($accent, 10%);
+			border: 2px solid lighten($accent, 10%);
+		}
+	}
+
+	&--white-border {
+		border: 2px solid $white;
+		color: $white;
+
+		&:hover {
+			color: $yellow;
+			border: 2px solid $yellow;
+		}
+	}
+
+	&--yellow-border {
+		border: 2px solid $saffron;
+		color: $saffron;
+
+		&:hover {
+			color: lighten($saffron, 10%);
+			border: 2px solid lighten($saffron, 10%);
+		}
+	}
+
+	&--orange-border {
+		border: 2px solid $orange;
+		color: $orange;
+
+		&:hover {
+			color: lighten($orange, 10%);
+			border: 2px solid lighten($orange, 10%);
+		}
+	}
+}

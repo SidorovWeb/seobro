@@ -1,0 +1,58 @@
+.hamburger {
+	position: relative;
+	display: none;
+	z-index: 999;
+	width: 21px;
+	height: 17px;
+	cursor: pointer;
+
+
+
+	@include media-breakpoint-down(md) {
+		display: block;
+	}
+
+	&__span {
+		position: absolute;
+		width: inherit;
+		height: 2px;
+		margin-top: 10px;
+		background-color: $black;
+		opacity: 0;
+		transform: translateX(0) translateY(0) rotate(0);
+		transition: all 0.3s;
+
+		@media screen and (max-width: 1170px) {
+			opacity: 1;
+		}
+
+		&:nth-child(1) {
+			top: -7px;
+			background-color: $black;
+		}
+
+		&:nth-child(3) {
+			top: 7px;
+			background-color: $black;
+		}
+	}
+
+	&--open {
+		& .hamburger__span {
+			background-color: transparent;
+
+			&:nth-child(1),
+			&:nth-child(3) {
+				background-color: $black;
+			}
+
+			&:nth-child(1) {
+				transform: translateX(0) translateY(8px) rotate(45deg) !important;
+			}
+
+			&:nth-child(3) {
+				transform: translateX(0) translateY(-6px) rotate(-45deg) !important;
+			}
+		}
+	}
+}

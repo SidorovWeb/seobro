@@ -9594,7 +9594,6 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 "use strict";
 
 $(document).ready(function () {
-  // svg4everybody()
   var swiper = new Swiper('.swiper-container', {
     grabCursor: true,
     loop: true,
